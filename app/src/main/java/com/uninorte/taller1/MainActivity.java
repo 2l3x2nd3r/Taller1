@@ -31,19 +31,21 @@ public class MainActivity extends AppCompatActivity {
         if(data[0].isEmpty() || data[1].isEmpty() || data[2].isEmpty()) {
             Toast.makeText(this, "Debe digitar las 3 notas", Toast.LENGTH_SHORT).show();
         }else{
-            double nota1 = Double.parseDouble(data[0]);
-            double nota2 = Double.parseDouble(data[1]);
-            double nota3 = Double.parseDouble(data[2]);
-            if (nota1 > 5 || nota2 > 5 || nota3 > 5) {
+            double n1 = Double.parseDouble(data[0]);
+            double n2 = Double.parseDouble(data[1]);
+            double n3 = Double.parseDouble(data[2]);
+            if (n1 > 5 || n2 > 5 || n3 > 5) {
                 Toast.makeText(this, "Las 3 notas deben ser menores o iguales a 5", Toast.LENGTH_SHORT).show();
+            }else if(n1 < 0 || n2 < 0 || n3 < 0){
+                Toast.makeText(this, "Las 3 notas deben ser mayores o iguales a 0", Toast.LENGTH_SHORT).show();
             } else {
-                double nota4 = ((3.5 - (nota1 + nota2 + nota3) / 4) / 0.25);
-                if (nota4 > 5) {
-                    tv2.setText("Te la mamaste, necesitas: " + nota4);
-                } else if (nota4 <= 0) {
+                double n4 = ((3.5 - (n1 + n2 + n3) / 4) / 0.25);
+                if (n4 > 5) {
+                    tv2.setText("Te la mamaste, necesitas: " + n4);
+                } else if (n4 <= 0) {
                     tv2.setText("Firme, ya la pasaste, si quieres no vallas mas a clase");
                 } else {
-                    tv2.setText("Necesitas: " + nota4);
+                    tv2.setText("Necesitas: " + n4);
                 }
             }
         }
