@@ -10,28 +10,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.uninorte.taller1.MainActivity">
 
+    <Button
+        android:text="Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:id="@+id/btn1"
+        android:onClick="calculate"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Digite 3 notas " />
+        android:layout_below="@+id/btn1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:id="@+id/tv2" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="17dp"
         android:id="@+id/et1"
         android:hint="Primera nota"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/tv1"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Bienvenido, aqui podras calcular la nota que necesitas sacar en el final."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="24sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:layout_marginTop="23dp"
         android:id="@+id/et2"
         android:hint="Segunda nota"
         android:layout_below="@+id/et1"
@@ -44,8 +65,16 @@
         android:ems="10"
         android:id="@+id/et3"
         android:hint="Tercera nota"
-        android:layout_marginTop="26dp"
         android:layout_below="@+id/et2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Digite las 3 notas "
+        android:id="@+id/tv1"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/tv3"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
